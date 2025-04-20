@@ -7,20 +7,19 @@
 </head>
 <body>
 
-<div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="resume.html">Resume</a>
-    <a href="scratch.html">Scratch Page</a>
-    <a href="webapp.html">Personality Quiz</a>
-</div>
+    <div class="navbar">
+        <a href="index.html">Home</a> |
+        <a href="resume.html">Resume</a> |
+        <a href="scratch.html">Scratch Page</a> |
+        <a href="quiz.html">Personality Quiz</a>
+    </div>
 
-<div class="centered">
-    <h1>My Favorite Philosophy Books</h1>
+    <div class="centered">
+        <h1>My Favorite Philosophy Books</h1>
 
-    <h2>Top Authors and Their Works</h2>
+        <h2>Top Authors and Their Works</h2>
 
-    <div style="text-align: center;">
-        <ol style="display: inline-block; text-align: left;">
+        <ol style="text-align: left; display: inline-block;">
             <li>Dostoyevsky
                 <ul>
                     <li>The Brothers Karamazov</li>
@@ -45,27 +44,61 @@
                 </ul>
             </li>
         </ol>
-    </div>
 
-    <img src="yourimage.jpg" alt="Dostoyevsky Portrait" width="400">
+        <div class="centered">
+            <img src="yourimage.jpg" alt="Old Philosophy Book" width="400">
+        </div>
 
-    <h2>Watch a Quick Overview of Dostoyevsky</h2>
-    <div style="text-align: center;">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/MMmSdxZpseY?si=30GKc4Yf09X6Guc-" 
-        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen></iframe>
-    </div>
+        <h2>Watch a Quick Overview of Dostoyevsky</h2>
 
-    <h2>Interactive Visualization</h2>
-    <div style="text-align: center;">
-        <iframe src="https://public.tableau.com/views/RegionalSampleWorkbook/Storms?:language=en-US&:display_count=n&:origin=viz_share_link"
-        width="800" height="600" frameborder="0" allowfullscreen></iframe>
-    </div>
+        <div class="centered">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MMmSdxZpseY?si=30GKc4Yf09X6Guc-" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </div>
 
-    <div class="backtotop">
-        <a href="#top">Back to Top</a>
+        <h2>Interactive Visualization</h2>
+
+        <div class="centered">
+            <!-- Tableau Embed Code Here -->
+            <div class='tableauPlaceholder' id='viz1745112247789' style='position: relative'>
+                <noscript>
+                    <a href='#'>
+                        <img alt='Sheet 1 ' src='https://public.tableau.com/static/images/QW/QWMZTQXKR/1_rss.png' style='border: none' />
+                    </a>
+                </noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='path' value='shared&#47;QWMZTQXKR' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https://public.tableau.com/static/images/QW/QWMZTQXKR/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1745112247789');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width='100%';
+                vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        </div>
+
+        <div class="backtotop">
+            <a href="#top">Back to Top</a>
+        </div>
+
     </div>
-</div>
 
 </body>
 </html>
