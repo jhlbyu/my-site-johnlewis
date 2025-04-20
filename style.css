@@ -1,68 +1,56 @@
 body {
     background-color: #f5f5f5;
     font-family: Arial, sans-serif;
-    font-size: 18px;
-    color: #222222;
+    color: #222;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar {
     background-color: #333;
-    padding: 1em;
+    padding: 10px;
     text-align: center;
 }
 
 .navbar a {
     color: white;
-    margin: 0 15px;
     text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
 }
 
-.header {
-    text-align: center;
-    padding: 20px;
-}
-
-.content {
-    width: 80%;
-    margin: auto;
-    padding: 20px;
-}
-
-img {
-    display: block;
-    margin: 20px auto;
+.navbar a:hover {
+    text-decoration: underline;
 }
 
 .centered {
-    text-align: center;
+    padding: 20px;
 }
 
-.centered iframe {
-    margin: 0 auto;
-    display: block;
-}
-
-/* This keeps list left-aligned but centers the container itself */
-.list-container {
-    width: 60%;
-    margin: 0 auto;
+.centered-list {
+    display: inline-block;
     text-align: left;
+    margin-bottom: 30px;
+}
+
+img {
+    margin: 20px 0;
+}
+
+iframe {
+    margin: 20px 0;
 }
 
 .backtotop {
-    text-align: center;
-    margin-top: 30px;
+    margin-top: 40px;
 }
-.centered ol {
-    list-style-position: inside;
-    text-align: left;
-    margin: 0 auto;
-    max-width: 600px;
+
+.backtotop a {
+    color: blue;
+    font-size: 14px;
 }
-.centered ul {
-    list-style-position: inside;
-    margin-left: 20px;
-}
+
 
 
 
