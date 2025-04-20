@@ -53,6 +53,16 @@ img {
     text-align: center;
     margin-top: 30px;
 }
+.centered ol {
+    list-style-position: inside;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
+}
+.centered ul {
+    list-style-position: inside;
+    margin-left: 20px;
+}
 
 
 
