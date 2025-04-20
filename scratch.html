@@ -4,25 +4,22 @@
     <meta charset="UTF-8">
     <title>Favorite Philosophy Books</title>
     <link rel="stylesheet" href="style.css">
-
-    <!-- Load Tableau Script Early -->
-    <script type="text/javascript" src="https://public.tableau.com/javascripts/api/viz_v1.js"></script>
 </head>
 <body>
 
-    <div class="navbar">
-        <a href="index.html">Home</a> |
-        <a href="resume.html">Resume</a> |
-        <a href="scratch.html">Scratch Page</a> |
-        <a href="quiz.html">Personality Quiz</a>
-    </div>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="scratch.html">Scratch Page</a>
+        <a href="webapp.html">Personality Quiz</a>
+    </nav>
 
     <div class="centered">
         <h1>My Favorite Philosophy Books</h1>
 
         <h2>Top Authors and Their Works</h2>
 
-        <ol style="text-align: left; display: inline-block;">
+        <ol>
             <li>Dostoyevsky
                 <ul>
                     <li>The Brothers Karamazov</li>
@@ -48,43 +45,46 @@
             </li>
         </ol>
 
-        <div class="centered">
-            <img src="yourimage.jpg" alt="Old Philosophy Book" width="400">
-        </div>
+        <img src="yourimage.jpg" alt="Old Philosophy Book" width="400">
 
         <h2>Watch a Quick Overview of Dostoyevsky</h2>
-
-        <div class="centered">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/MMmSdxZpseY?si=30GKc4Yf09X6Guc-" 
-                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-                gyroscope; picture-in-picture" allowfullscreen>
-            </iframe>
-        </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/MMmSdxZpseY?si=30GKc4Yf09X6Guc-" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
 
         <h2>Interactive Visualization</h2>
 
-        <div class="centered">
-            <!-- Tableau Embed -->
-            <div class='tableauPlaceholder' id='viz1681834544778' style='width: 800px; height: 700px;'>
-                <noscript><a href='#'>
-                    <img alt='Philosopher Influence Scores' src='https://public.tableau.com/static/images/QW/QWMZTQXKR/1_rss.png' style='border: none' />
-                </a></noscript>
-                <object class='tableauViz'>
-                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                    <param name='embed_code_version' value='3' />
-                    <param name='path' value='shared/QWMZTQXKR' />
-                    <param name='toolbar' value='yes' />
-                    <param name='static_image' value='https://public.tableau.com/static/images/QW/QWMZTQXKR/1.png' />
-                    <param name='animate_transition' value='yes' />
-                    <param name='display_static_image' value='yes' />
-                    <param name='display_spinner' value='yes' />
-                    <param name='display_overlay' value='yes' />
-                    <param name='display_count' value='yes' />
-                    <param name='language' value='en-US' />
-                    <param name='filter' value='publish=yes' />
-                </object>
-            </div>
+        <!-- Tableau Visualization -->
+        <div class='tableauPlaceholder' id='viz1745112828261' style='position: relative'>
+            <noscript>
+                <a href='#'>
+                    <img alt='Sheet 1' src='https://public.tableau.com/static/images/Ph/PhilosopherInfluenceScores/Sheet1/1_rss.png' style='border: none' />
+                </a>
+            </noscript>
+            <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='site_root' value='' />
+                <param name='name' value='PhilosopherInfluenceScores/Sheet1' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https://public.tableau.com/static/images/Ph/PhilosopherInfluenceScores/Sheet1/1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en-US' />
+            </object>
         </div>
+
+        <script type='text/javascript'>
+            var divElement = document.getElementById('viz1745112828261');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            vizElement.style.width = '100%';
+            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
 
         <div class="backtotop">
             <a href="#top">Back to Top</a>
@@ -94,3 +94,4 @@
 
 </body>
 </html>
+
