@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book of Mormon Personality Quiz</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            color: #222;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .question-container {
+            margin-top: 50px;
+        }
+
+        .answers {
+            margin-top: 20px;
+        }
+
+        .answers button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 250px;
+        }
+
+        .answers button:hover {
+            background-color: #555;
+        }
+
+        .result {
+            font-size: 24px;
+            margin-top: 40px;
+        }
+
+        .nav-links {
+            margin-top: 30px;
+        }
+
+        .nav-links a {
+            margin: 0 15px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .character-image {
+            margin-top: 20px;
+            width: 300px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a> |
+        <a href="resume.html">Resume</a> |
+        <a href="scratch.html">Scratch Page</a>
+    </div>
+
+    <h1>Which Book of Mormon Character Are You?</h1>
+
+    <div class="question-container" id="quiz">
+        <h2 id="question">Loading...</h2>
+        <div class="answers" id="answers"></div>
+    </div>
+
+    <div class="result hidden" id="result"></div>
+
+    <script>
+        const questions = [
+            {
+                question: "When faced with a challenge, you...",
+                options: {
+                    A: "Tackle it head-on",
+                    B: "Seek wisdom and counsel",
+                    C: "Defend what's right at all costs",
+                    D: "Proclaim truth boldly"
+                }
+            },
+            {
+                question: "Your greatest strength is...",
+                options: {
+                    A: "Faith and obedience",
+                    B: "Teaching and inspiring others",
+                    C: "Courage and leadership",
+                    D: "Standing alone for what's right"
+                }
+            },
+            {
+                question: "Pick a symbol that resonates with you:",
+                options: {
+                    A: "Iron Rod",
+                    B: "Plates of Brass",
+                    C: "Title of Liberty",
+                    D: "Flames of Truth"
+                }
+            },
+            {
+                question: "How do you lead others?",
+                options: {
+                    A: "Quietly by example",
+                    B: "Through compassion",
+                    C: "By rallying others",
+                    D: "By prophetic warning"
+                }
+            },
+            {
+                question: "Which scripture theme inspires you most?",
+                options: {
+                    A: "Obedience",
+                    B: "Repentance",
+                    C: "Liberty",
+                    D: "Bold testimony"
+                }
+            },
+            {
+                question: "In a trial, you rely on...",
+                options: {
+                    A: "God’s strength",
+                    B: "Knowledge",
+                    C: "Strategic planning",
+                    D: "Faithful endurance"
+                }
+            },
+            {
+                question: "Your ideal mission would be...",
+                options: {
+                    A: "Building Zion",
+                    B: "Preaching to the wayward",
+                    C: "Defending the weak",
+                    D: "Witnessing without fear"
+                }
+            },
+            {
+                question: "When discouraged, you...",
+                options: {
+                    A: "Pray and trust",
+                    B: "Teach yourself and others",
+                    C: "Push through fiercely",
+                    D: "Bear testimony even harder"
+                }
+            },
+            {
+                question: "Which phrase describes you best?",
+                options: {
+                    A: "Faithful builder",
+                    B: "Inspiring teacher",
+                    C: "Freedom fighter",
+                    D: "Bold prophet"
+                }
+            },
+            {
+                question: "What motivates you most?",
+                options: {
+                    A: "Following God's plan",
+                    B: "Helping others repent",
+                    C: "Protecting the righteous",
+                    D: "Declaring truth without fear"
+                }
+            }
+        ];
+
+        let currentQuestion = 0;
+        let scores = { A: 0, B: 0, C: 0, D: 0 };
+
+        function showQuestion() {
+            const questionEl = document.getElementById('question');
+            const answersEl = document.getElementById('answers');
+            const q = questions[currentQuestion];
+
+            questionEl.textContent = q.question;
+            answersEl.innerHTML = '';
+
+            for (let key in q.options) {
+                const btn = document.createElement('button');
+                btn.textContent = q.options[key];
+                btn.onclick = () => selectAnswer(key);
+                answersEl.appendChild(btn);
+            }
+        }
+
+        function selectAnswer(letter) {
+            scores[letter]++;
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                showQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            document.getElementById('quiz').classList.add('hidden');
+            const resultEl = document.getElementById('result');
+            let topScore = 'A';
+            for (let letter in scores) {
+                if (scores[letter] > scores[topScore]) {
+                    topScore = letter;
+                }
+            }
+
+            let character = "";
+            let description = "";
+            let imageFile = "";
+
+            switch (topScore) {
+                case 'A':
+                    character = "Nephi";
+                    description = "You are strong, faithful, and obedient.";
+                    imageFile = "nephi.jpg";
+                    break;
+                case 'B':
+                    character = "Alma the Younger";
+                    description = "You inspire others through your transformation and teachings.";
+                    imageFile = "alma.jpg";
+                    break;
+                case 'C':
+                    character = "Captain Moroni";
+                    description = "You stand bravely for liberty and righteousness.";
+                    imageFile = "moroni.jpg";
+                    break;
+                case 'D':
+                    character = "Abinadi";
+                    description = "You are fearless in declaring truth, even when it is hard.";
+                    imageFile = "abinadi.jpg";
+                    break;
+            }
+
+            resultEl.innerHTML = `
+                <h2>You are like ${character}!</h2>
+                <p>${description}</p>
+                <img src="${imageFile}" alt="${character}" class="character-image">
+            `;
+            resultEl.classList.remove('hidden');
+        }
+
+        showQuestion();
+    </script>
+
+</body>
+</html>
+
